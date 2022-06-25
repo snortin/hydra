@@ -29,12 +29,11 @@ os.system('cls') # same as before
 async def on_connect(): # connects to users token as like a selfbot
     for f in client.user.friends: # finds how many friends are in friends list and stores it in db
 
-        try: # try statement if the token is correct or not reset it will mas send the message above that you put in the variable
-            await f.send(msg) # await function to send message to all friends which in this case is `f` for abbreviation
-            print(f"{f.GREEN}Messaged: {f.LIGHTBLUE}[{f.name}] / {f.RESET}{msg}") # tells us if it sent or not because on the await function its own we wouldnt know
-            
+        try: # try statement if the token is correct or not reset it will mass send the message above that you put in the input
+            await f.send(msg) # ratio
+            print(f"{f.GREEN}Messaged: {f.LIGHTBLUE}[{f.name}] / {f.RESET}{msg}") # ratio            
         except: # except statement if the token is incorrect it states a error message
             print(f'{f.RED}Couldnt message: {f.LIGHTBLUE}[{f.name}] / {f.RESET}{msg}') # error message
-            pass # passes the error
+            pass
             
-client.run(token, bot=False) # runs the token, but were not a bot so `bot=False` or we couldve dont `selfbot=True` but yea thats it
+client.run(token, bot=False) # ratio
